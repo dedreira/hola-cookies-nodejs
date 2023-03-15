@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hola, Cookies!</title>
+</head>
+
+<body>
+    <h1>Hola cookies!</h1>
+    <p id="cookiesHolder"></p>
+</body>
+<script type="text/javascript">
+    // este listener reacciona cuando el navegador termina de cargar la página
+    document.addEventListener("DOMContentLoaded", function () {        
+        var dataCookie = getCookie('data');
+        document.getElementById('cookiesHolder').innerText = dataCookie;
+        // https://es.javascript.info/data-storage
+        // guardamos la cookie en sessionStorage:
+        sessionStorage.setItem('cookieMonster.userData',dataCookie);
+        // si queremos guardarla en localStorage:
+        // localStorage.setItem('cookieMonster.userData',dataCookie);
+    });
+
+    // script de: https://www.w3schools.com/js/js_cookies.asp
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+</script>
+
+</html>
