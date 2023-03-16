@@ -22,7 +22,7 @@ si todo ha ido bien, verás este mensaje:
 
 server start at port 3000
 
-después, solo tienes que navegar hasta la ruta https://localhost:3000/cookies y verás un mensaje junto con un json con los datos del usuario que hemos recuperado de la cookie.
+después, solo tienes que navegar hasta la ruta http://localhost:3000/cookies y verás un mensaje junto con un json con los datos del usuario que hemos recuperado de la cookie.
 
 ## Dónde está la magia?
 
